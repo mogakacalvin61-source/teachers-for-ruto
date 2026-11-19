@@ -26,7 +26,7 @@
 
 .media-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.media-grid a{padding:23px;background:var(--deep);color:#fff;min-height:120px;display:flex;flex-direction:column;justify-content:space-between;border-bottom:4px solid var(--gold)}.media-grid a b{font:700 16px Montserrat}.media-grid a span{font-size:11px;color:#d7e6db}
 
-.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.news-card{background:#fff;box-shadow:0 7px 24px #193b2410}.news-image{height:190px;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,#0a6338,#8aa77b)}.image-two{background:linear-gradient(135deg,#b17c27,#e7c77f)}.image-three{background:linear-gradient(135deg,#294f72,#81a8bd)}.news-body{padding:22px}.news-body small{font-size:10px;color:#a57928;font-weight:800;letter-spacing:1px}.news-body h3{font-size:17px;color:var(--deep);margin:10px 0}.news-body p{font-size:12px;color:var(--muted)}.news-body>a{font-size:12px;color:var(--green);font-weight:800}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.news-card{background:#fff;box-shadow:0 7px 24px #193b2410}.news-image{height:190px;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,#0a6338,#8aa77b)}.image-two{background:linear-gradient(135deg,#b17c27,#e7c77f)}.image-three{background:linear-gradient(135deg,#294f72,#81a8bd)}.news-body{padding:22px}.news-body small{font-size:14px;color:#a57928;font-weight:800;letter-spacing:1px}.news-body h3{font-size:19px;color:var(--deep);margin:10px 0}.news-body p{font-size:16px;color:var(--muted)}.news-body>a{font-size:12px;color:var(--green);font-weight:800}
 
 .site-footer{background:#064d2c;color:#fff;padding-top:55px}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr .7fr;gap:55px;padding-bottom:40px}.footer-grid h2{font-size:19px;border-bottom:2px solid var(--gold);padding-bottom:13px;margin-bottom:18px}.partner-list,.contact-list{list-style:none;padding:0;margin:0}.partner-list li,.contact-list li{padding:8px 0;border-bottom:1px solid #ffffff20;font-size:13px;color:#e1eee5}.contact-list li{display:flex;gap:10px;flex-wrap:wrap}.contact-list small{width:100%;padding-left:25px;color:#a9c5b1}.footer-note{font-size:11px;color:#a9c5b1}.site-footer a:hover{color:#f4c35d}.copyright{background:#043d23;padding:16px 0;font-size:11px;color:#c7d9cb}.copyright .container{display:flex;justify-content:space-between;gap:15px}
 
@@ -2595,5 +2595,64 @@ section,
 
     .dropdown {
         min-width: 200px;
+    }
+}
+
+/* TRM MOBILE NAVIGATION FIX */
+
+@media (max-width: 768px) {
+
+    .main-nav {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .nav-inner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 6px !important;
+        box-sizing: border-box;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-link {
+        display: flex;
+        padding: 10px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2000;
+        min-width: 190px;
+    }
+
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+        display: block;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 400px) {
+
+    .nav-inner {
+        gap: 3px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+        padding: 9px 6px;
     }
 }
