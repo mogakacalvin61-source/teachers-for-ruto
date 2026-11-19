@@ -176,3 +176,683 @@
 .hero-content {
     z-index: 3 !important;
 }
+
+/* TRM PUBLIC PROJECT STORIES */
+
+.project-stories {
+  padding: 75px 20px;
+  background: #f5f8f4;
+}
+
+.stories-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 42px;
+}
+
+.stories-label {
+  color: #c58b32;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.stories-heading h2 {
+  color: #075b3b;
+  font-size: clamp(27px, 4vw, 40px);
+  margin: 12px 0;
+  font-weight: 800;
+}
+
+.stories-heading p {
+  color: #65736b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+.story-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 13px 30px rgba(0, 0, 0, 0.14);
+}
+
+.story-image {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-card:hover .story-image img {
+  transform: scale(1.07);
+}
+
+.story-category {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background: #d99b35;
+  color: #ffffff;
+  padding: 7px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.story-content {
+  padding: 23px;
+}
+
+.story-location {
+  color: #168052;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.story-content h3 {
+  color: #164c36;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 12px 0;
+}
+
+.story-content p {
+  color: #68756d;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-link {
+  color: #087346;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.story-link:hover {
+  color: #c58b32;
+}
+
+.directory-action {
+  text-align: center;
+  margin-top: 42px;
+}
+
+.directory-button {
+  display: inline-block;
+  background: #075b3b;
+  color: white;
+  padding: 17px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background 0.3s ease;
+}
+
+.directory-button:hover {
+  background: #c58b32;
+}
+
+/* MOBILE DISPLAY */
+
+@media (max-width: 768px) {
+  .project-stories {
+    padding: 48px 15px;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .story-image {
+    height: 220px;
+  }
+
+  .story-content h3 {
+    font-size: 19px;
+  }
+
+  .directory-button {
+    display: block;
+    padding: 16px 12px;
+  }
+}
+
+/* TRM PUBLIC PROJECT CARDS - REFERENCE DESIGN */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #555f59;
+}
+
+.project-card h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #303b35;
+  margin: 0 0 12px;
+}
+
+.project-card .ministry-name {
+  font-size: 13px;
+  color: #707a73;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.project-card-content > p:not(.ministry-name) {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #737b75;
+  margin: 0 0 20px;
+}
+
+.project-card-footer {
+  border-top: 1px solid #edf0ed;
+  margin: auto -20px -20px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #777f79;
+}
+
+.view-details {
+  color: #263b30;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.view-details:hover {
+  color: #b78335;
+}
+
+.status-label {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.status-label.completed {
+  background: #e1f2e8;
+  color: #287448;
+}
+
+.status-label.launched {
+  background: #e4effb;
+  color: #3272ae;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-content {
+    padding: 16px;
+  }
+
+  .project-card-footer {
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    padding: 14px 16px;
+  }
+
+  .project-card h3 {
+    font-size: 17px;
+  }
+}
+
+/* PROJECT DIRECTORY FILTER BAR */
+
+.project-filters {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+  background: #ffffff;
+  padding: 20px;
+  margin: 25px 0;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid #263b30;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.filter-group label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #69736c;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  height: 48px;
+  padding: 0 13px;
+  border: 1px solid #dfe4df;
+  border-radius: 7px;
+  background: #fff;
+  color: #39443d;
+  font-size: 13px;
+  outline: none;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: #32744f;
+}
+
+#resetFilters {
+  height: 48px;
+  padding: 0 18px;
+  border: 1px solid #dfe4df;
+  border-radius: 7px;
+  background: #f7f8f7;
+  color: #39443d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#resetFilters:hover {
+  background: #263b30;
+  color: #fff;
+}
+
+.project-count {
+  font-size: 13px;
+  color: #788078;
+  margin: 20px 0;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .project-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* PHONE */
+@media (max-width: 550px) {
+  .project-filters {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  #resetFilters {
+    width: 100%;
+  }
+}
+
+/* =====================================
+   TRM FULL-WIDTH WEBSITE LAYOUT
+   ===================================== */
+
+/* Remove the narrow width restriction */
+.container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(16px, 3vw, 48px) !important;
+    padding-right: clamp(16px, 3vw, 48px) !important;
+    box-sizing: border-box;
+}
+
+/* Make all major sections use the available screen width */
+section,
+.site-header,
+.site-footer,
+main {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Membership and county distribution */
+.network-section,
+.membership-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Public Projects Directory */
+.projects-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Keep project cards professionally arranged */
+.projects-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Prevent horizontal scrolling */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .container {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PUBLIC PROJECTS DIRECTORY DESIGN */
+
+.projects-section {
+  width: 100%;
+  padding: 65px 0;
+  background: #f4f7f5;
+}
+
+.projects-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.projects-eyebrow {
+  color: #d18b28;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.projects-heading h2 {
+  color: #174d35;
+  font-size: clamp(30px, 4vw, 42px);
+  margin: 12px 0;
+}
+
+.projects-heading p {
+  font-size: 17px;
+  color: #59675f;
+}
+
+.project-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 15px;
+  align-items: end;
+  padding: 24px;
+  background: white;
+  border: 1px solid #dce6df;
+  border-top: 4px solid #174d35;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.project-filters label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #344b3d;
+  margin-bottom: 9px;
+}
+
+.project-filters select,
+.project-filters input {
+  width: 100%;
+  min-width: 0;
+  height: 49px;
+  padding: 0 12px;
+  border: 1px solid #cbd7ce;
+  border-radius: 7px;
+  font-size: 15px;
+  background: #fff;
+  color: #263b30;
+  box-sizing: border-box;
+}
+
+#resetProjects {
+  height: 49px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 7px;
+  background: #174d35;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.project-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: #475b4d;
+  margin: 28px 0 18px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  border: 1px solid #e2e9e4;
+  border-top: 5px solid #174d35;
+  box-shadow: 0 5px 18px rgba(0,0,0,.055);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.10);
+}
+
+.project-card h3 {
+  font-size: 21px;
+  line-height: 1.4;
+  color: #253c30;
+  margin: 18px 0 10px;
+}
+
+.project-ministry {
+  font-size: 15px;
+  font-weight: 800;
+  color: #53675b;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5c6860;
+  flex-grow: 1;
+}
+
+.project-card-top,
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-icon {
+  font-size: 28px;
+}
+
+.project-status,
+.project-tag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  padding: 8px 11px;
+  border-radius: 20px;
+}
+
+.completed {
+  background: #dff3e6;
+  color: #187044;
+}
+
+.launched {
+  background: #e0edff;
+  color: #225da5;
+}
+
+.ongoing {
+  background: #fff0d8;
+  color: #a35c00;
+}
+
+.education-project { border-top-color: #16734b; }
+.health-project { border-top-color: #2479c4; }
+.roads-project { border-top-color: #d28a25; }
+.water-project { border-top-color: #1599b4; }
+.digital-project { border-top-color: #8054b5; }
+
+.education-project .project-tag { background: #e1f3e8; color: #16734b; }
+.health-project .project-tag { background: #e5f0fc; color: #2479c4; }
+.roads-project .project-tag { background: #fff0d9; color: #a76b16; }
+.water-project .project-tag { background: #e0f5f8; color: #087f98; }
+.digital-project .project-tag { background: #f0e9fa; color: #7044a5; }
+
+.project-card-footer {
+  border-top: 1px solid #e8eee9;
+  padding-top: 16px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #66736a;
+}
+
+.no-projects {
+  text-align: center;
+  padding: 35px;
+  color: #9b4b36;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media(max-width: 950px) {
+  .project-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width: 600px) {
+  .projects-section {
+    padding: 40px 0;
+  }
+
+  .project-filters,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 19px;
+  }
+}
