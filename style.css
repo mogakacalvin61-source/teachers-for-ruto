@@ -144,3 +144,35 @@
         min-height: 520px !important;
     }
 }
+/* KEEP TRM HERO TEXT VISIBLE ABOVE SLIDESHOW */
+
+.hero-content {
+    position: relative !important;
+    z-index: 10 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    padding-top: 90px !important;
+}
+
+.hero-content h1 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+}
+
+.hero-content p {
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+}
+
+.hero-shade {
+    z-index: 2 !important;
+}
+
+.hero-content {
+    z-index: 3 !important;
+}
