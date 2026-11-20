@@ -3281,99 +3281,368 @@ section,
     }
 }
 
-/* LATEST NEWS - THREE UNIFORM RECTANGLES */
+/* ==========================================
+   TRM WEBSITE - FULL RESPONSIVE DESIGN
+   Phones, tablets, laptops and desktops
+========================================== */
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    width: 100%;
-    align-items: stretch;
-}
+/* 1. GLOBAL RESPONSIVE SETTINGS */
 
-.news-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    background: #ffffff;
-    border: 1px solid #e2e9e4;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+* {
     box-sizing: border-box;
 }
 
-.news-image {
+html {
     width: 100%;
-    height: 220px;
-    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.news-image img {
+body {
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+/* 2. ALL MAIN SECTIONS */
+
+section,
+header,
+footer,
+main,
+.container,
+.section-container {
+    max-width: 100%;
+}
+
+.container,
+.section-container {
+    width: min(100% - 40px, 1400px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 3. RESPONSIVE HEADINGS AND TEXT */
+
+h1 {
+    font-size: clamp(28px, 4vw, 54px);
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(23px, 3vw, 38px);
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: clamp(17px, 2vw, 23px);
+    line-height: 1.4;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+/* 4. RESPONSIVE IMAGES */
+
+img {
+    max-width: 100%;
+}
+
+.hero img,
+.news-image img,
+.project-image img {
+    width: 100%;
     object-fit: cover;
+}
+
+/* 5. RESPONSIVE GRIDS */
+
+.news-grid,
+.projects-grid,
+.resources-grid,
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+/* 6. RESPONSIVE CARDS */
+
+.news-card,
+.project-card,
+.resource-card {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.news-card img,
+.project-card img {
     display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
-.news-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
+/* 7. TABLET SCREENS */
 
-.news-body small {
-    color: #087346;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
+@media (max-width: 1024px) {
 
-.news-body h3 {
-    color: #183f30;
-    font-size: 19px;
-    line-height: 1.45;
-    font-weight: 800;
-    margin: 0 0 14px;
-}
+    .container,
+    .section-container {
+        width: calc(100% - 32px);
+    }
 
-.news-body p {
-    color: #59675f;
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 0 0 12px;
-    text-align: left;
-}
-
-/* TABLET */
-@media (max-width: 900px) {
-    .news-grid {
+    .news-grid,
+    .projects-grid,
+    .resources-grid,
+    .cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
-/* PHONE */
-@media (max-width: 600px) {
-    .news-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+/* 8. ANDROID PHONES */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
     }
 
-    .news-image {
-        height: 210px;
+    .container,
+    .section-container {
+        width: calc(100% - 24px);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Header */
+    .brand-row.container {
+        width: 100%;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+
+    .alliance-logos img {
+        max-width: 42px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .brand-title {
+        font-size: clamp(12px, 3.5vw, 18px);
+        text-align: center;
+    }
+
+    .trm-mark img {
+        max-width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    /* Navigation */
+    nav,
+    .main-nav {
+        max-width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        min-height: 420px;
+        padding: 35px 18px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Main content grids */
+    .news-grid,
+    .projects-grid,
+    .resources-grid,
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* County distribution */
+    .county-grid,
+    .county-circles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    /* Filters */
+    .project-filters,
+    .filter-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .project-filters input,
+    .project-filters select,
+    .filter-bar input,
+    .filter-bar select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Project cards */
+    .project-card {
+        width: 100%;
+        min-height: 0;
+    }
+
+    /* Footer */
+    footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* 9. SMALL ANDROID PHONES */
+
+@media (max-width: 480px) {
+
+    .container,
+    .section-container {
+        width: calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: clamp(25px, 8vw, 34px);
+    }
+
+    h2 {
+        font-size: clamp(21px, 6vw, 28px);
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .news-card,
+    .project-card,
+    .resource-card {
+        width: 100%;
+        border-radius: 10px;
     }
 
     .news-body {
-        padding: 18px;
+        padding: 16px;
     }
 
-    .news-body h3 {
-        font-size: 18px;
+    .news-image {
+        height: 190px;
     }
 
-    .news-body p {
-        font-size: 14px;
+    .county-grid,
+    .county-circles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    button,
+    .btn,
+    .button {
+        max-width: 100%;
+    }
+
+}
+
+/* 10. VERY NARROW PHONES */
+
+@media (max-width: 360px) {
+
+    .container,
+    .section-container {
+        width: calc(100% - 16px);
+    }
+
+    .brand-row.container {
+        gap: 5px !important;
+    }
+
+    .alliance-logos img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .trm-mark img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .brand-title {
+        font-size: 11px;
+    }
+
+    .county-grid,
+    .county-circles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* 11. PREVENT ELEMENTS FROM CAUSING OVERFLOW */
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+table {
+    max-width: 100%;
+}
+
+pre,
+code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* 12. RESPONSIVE SPACING */
+
+@media (max-width: 768px) {
+
+    .section-heading {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
 }
