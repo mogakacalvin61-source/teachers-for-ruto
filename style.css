@@ -2656,3 +2656,498 @@ section,
         padding: 9px 6px;
     }
 }
+/* Public Projects Directory - Typography */
+
+.project-card h3 {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.project-ministry {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.project-status {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.project-card-footer {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-icon {
+    font-size: 30px;
+}
+/* =====================================
+   PUBLIC PROJECTS DIRECTORY
+===================================== */
+
+.projects-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 25px 0 40px;
+    align-items: stretch;
+}
+
+/* Individual project rectangle */
+.project-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 280px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e4ebe6;
+    border-top: 5px solid #08764b;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Different accent colours */
+.project-card:nth-child(6n+1) {
+    border-top-color: #08764b;
+}
+
+.project-card:nth-child(6n+2) {
+    border-top-color: #3182ce;
+}
+
+.project-card:nth-child(6n+3) {
+    border-top-color: #d69e2e;
+}
+
+.project-card:nth-child(6n+4) {
+    border-top-color: #159a9a;
+}
+
+.project-card:nth-child(6n+5) {
+    border-top-color: #805ad5;
+}
+
+.project-card:nth-child(6n+6) {
+    border-top-color: #dd6b20;
+}
+
+/* Top row: status and ministry */
+.project-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 7px 11px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.project-status.completed {
+    background: #e1f5e9;
+    color: #137443;
+}
+
+.project-status.launched {
+    background: #e3f0ff;
+    color: #2163a5;
+}
+
+.project-ministry {
+    max-width: 55%;
+    color: #65716b;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* Project title */
+.project-title {
+    width: 100%;
+    margin: 0 0 13px;
+    color: #183c30;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Project description */
+.project-details {
+    width: 100%;
+    margin: 0 0 22px;
+    color: #68736d;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Bottom row: category and county */
+.project-bottom {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #edf1ee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.project-category {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e8f4ed;
+    color: #176b46;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.project-county {
+    color: #56635c;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .project-card {
+        min-height: 270px;
+    }
+}
+
+/* =====================================
+   MOBILE PHONES
+===================================== */
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 18px 0 30px;
+    }
+
+    .project-card {
+        min-height: 245px;
+        padding: 18px;
+        border-radius: 11px;
+    }
+
+    .project-top {
+        margin-bottom: 16px;
+        gap: 8px;
+    }
+
+    .project-status {
+        font-size: 9px;
+        padding: 6px 9px;
+    }
+
+    .project-ministry {
+        font-size: 11px;
+    }
+
+    .project-title {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .project-details {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .project-bottom {
+        padding-top: 13px;
+    }
+
+    .project-category {
+        font-size: 9px;
+        padding: 6px 10px;
+    }
+
+    .project-county {
+        font-size: 11px;
+    }
+}
+/* RESPONSIVE HEADER FOR PHONES */
+@media screen and (max-width: 600px) {
+
+    /* Main logo and title row */
+    .brand-row.container {
+        display: grid !important;
+        grid-template-columns: auto 1fr auto !important;
+        align-items: center !important;
+        gap: 5px !important;
+        padding: 8px 6px !important;
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+    /* KUPPET and KNUT logos */
+    .alliance-logos {
+        display: flex !important;
+        align-items: center !important;
+        gap: 3px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .alliance-logos img {
+        width: 29px !important;
+        height: 29px !important;
+        object-fit: contain !important;
+    }
+
+    /* Movement title */
+    .brand-title {
+        font-size: 10px !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+        font-weight: 800 !important;
+        min-width: 0 !important;
+    }
+
+    /* TRM logo */
+    .trm-mark img {
+        width: 38px !important;
+        height: 38px !important;
+        object-fit: contain !important;
+    }
+
+    /* Navigation bar */
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 2px !important;
+        padding: 5px 3px !important;
+        margin: 0 !important;
+    }
+
+    nav ul li {
+        font-size: 10px !important;
+        padding: 5px 6px !important;
+    }
+
+    nav ul li a {
+        white-space: normal !important;
+        font-size: 10px !important;
+    }
+
+    /* Dropdown menus */
+    nav ul li ul {
+        min-width: 150px !important;
+        z-index: 9999 !important;
+    }
+}
+
+/* Very small phones */
+@media screen and (max-width: 380px) {
+    .alliance-logos img {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .brand-title {
+        font-size: 9px !important;
+    }
+
+    .trm-mark img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    nav ul li,
+    nav ul li a {
+        font-size: 9px !important;
+    }
+}
+/* COUNTY DISTRIBUTION */
+.county-section {
+    width: 100%;
+    padding: 45px 3%;
+    box-sizing: border-box;
+    background: #f5f8f5;
+}
+
+.county-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.county-heading h2 {
+    font-size: 32px;
+    font-weight: 850;
+    color: #075b3b;
+    margin-bottom: 8px;
+}
+
+.county-heading p {
+    font-size: 15px;
+    color: #64736a;
+}
+
+.county-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+    width: 100%;
+}
+
+.county-card {
+    background: #ffffff;
+    border: 1px solid #e1e9e3;
+    border-left: 4px solid #16845b;
+    border-radius: 9px;
+    padding: 17px 15px;
+    min-height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    box-sizing: border-box;
+}
+
+.county-name {
+    font-size: 15px;
+    font-weight: 800;
+    color: #34483d;
+}
+
+.county-card strong {
+    font-size: 21px;
+    font-weight: 900;
+    color: #087346;
+}
+
+.county-toggle {
+    display: block;
+    margin: 25px auto 0;
+    padding: 13px 32px;
+    border: none;
+    border-radius: 7px;
+    background: #087346;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.county-toggle:hover {
+    background: #064f32;
+}
+
+/* PHONE */
+@media(max-width: 600px) {
+    .county-section {
+        padding: 30px 15px;
+    }
+
+    .county-heading h2 {
+        font-size: 23px;
+    }
+
+    .county-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .county-card {
+        padding: 13px 11px;
+        min-height: 72px;
+    }
+
+    .county-name {
+        font-size: 13px;
+    }
+
+    .county-card strong {
+        font-size: 18px;
+    }
+
+    .county-toggle {
+        width: 100%;
+        padding: 13px;
+    }
+}
+/* JOIN THE MOVEMENT BUTTON ANIMATION */
+
+<a href="YOUR-GOOGLE-FORM-LINK"
+   class="join-movement-btn">
+   JOIN THE MOVEMENT NOW
+</a> {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #087346, #0b9b62);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #e4b33f;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 100, 60, 0.25);
+    transform-origin: center;
+    animation: joinPulse 2s ease-in-out infinite;
+    transition: box-shadow 0.3s ease;
+}
+
+@keyframes joinPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+.join-movement-btn:hover {
+    box-shadow: 0 8px 24px rgba(0, 100, 60, 0.4);
+    animation-play-state: paused;
+}
